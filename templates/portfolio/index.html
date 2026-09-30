@@ -1,0 +1,634 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashish Lokhande | Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link
+        rel="stylesheet"
+        href="{% static 'portfolio/css/style.css' %}"
+    >
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="{% url 'home' %}" class="logo">
+            @SH!SH<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Ashish Lokhande</h1>
+
+            <h2>Full Stack Python Developer</h2>
+
+            <p>
+                I build responsive and user-friendly web applications with a focus on clean code, modern technologies, and efficient solutions.
+            </p>
+
+
+            <div class="cta-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="section" id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <div class="about-content">
+
+
+            <!-- Profile Image -->
+            <div class="about-img">
+                <img src="{% static 'portfolio/images/ashupatil.jpg' %}" alt="Ashish Lokhande">
+            </div>
+
+
+            <!-- About Text -->
+            <div class="about-text">
+                <h3>
+                    Full Stack Python Developer
+                </h3>
+                <p>
+                    Hi, I'm Ashish Lokhande, a Computer Science graduate
+                    and passionate Full Stack Python Developer.
+                </p>
+
+                <p>
+                    I have hands-on experience with Python, Django,
+                    REST APIs, MySQL, HTML, CSS, JavaScript, Bootstrap
+                    and React.
+                </p>
+
+                <!-- Skills -->
+                <div class="skills">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Django</span>
+                            <span>85%</span>
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React JS</span>
+                            <span>65%</span>
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65%"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML / CSS</span>
+                            <span>95%</span>
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL / MongoDB</span>
+                            <span>80%</span>
+                        </div>
+
+
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PROJECT SECTION ================= -->
+    <section class="section" id="projects">
+        <h2 class="section-title">My Projects </h2>
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img
+                        src="https://ohzsecurity.com/wp-content/uploads/2023/10/shutterstock_11501807991.jpg"
+                        alt="Bank Security Project"
+                    >
+                </div>
+
+
+                <div class="project-info">
+                    <h3 class="project-title">Bank Management System </h3>
+                    <p class="project-description">
+                        Developed a Bank Management System for managing customer accounts, banking transactions, deposits, withdrawals, and account information efficiently using Python and MySQL.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MySQL </span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>Live Demo</a>
+
+                        <a href="https://github.com/Ashpatil2003/Bank-Management-System-" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img  src="{% static 'portfolio/images/radio.jpg' %}"  alt="Grid Puzzle Game">
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">Music Player</h3>
+
+                    <p class="project-description">
+                        Developed a music player application that allows users to play, pause, skip, and manage songs through a simple and interactive interface.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML </span>
+                        <span class="tech-tag">CSS </span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://musicplayer-django.onrender.com/" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+
+
+                        <a href="https://github.com/Ashpatil2003/MusicPlayer-Django" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img  src="{% static 'portfolio/images/social.jpg' %}"  alt="Grid Puzzle Game">
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">Social Media App</h3>
+
+                    <p class="project-description">
+                       Developed a full-stack social media application using Python and Django, enabling users to create profiles, share posts, and interact with other users.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML </span>
+                        <span class="tech-tag">CSS </span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://social-media-vkrn.onrender.com" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+
+
+                        <a href="https://github.com/Ashpatil2003/Social_Media" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img  src="{% static 'portfolio/images/weather.jpeg' %}"  alt="Grid Puzzle Game">
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">Weather App</h3>
+
+                    <p class="project-description">
+                        Developed a weather application that provides real-time weather information based on the user's selected City.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML </span>
+                        <span class="tech-tag">CSS </span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://weather-app-phx7.onrender.com/" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+
+
+                        <a href="https://github.com/Ashpatil2003/Weather_App" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="section" id="contact">
+
+        <h2 class="section-title">
+            Get In Touch
+        </h2>
+
+
+        <div class="contact-container">
+
+
+            <!-- Contact Information -->
+
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fas fa-map-marker-alt"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <h3>Location</h3>
+
+                        <p>Hyderabad, India</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <h3>Email</h3>
+
+                        <p>official.ashish2005@gmail.com</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fas fa-phone-alt"></i>
+
+                    </div>
+
+
+                    <div class="contact-text">
+
+                        <h3>Phone</h3>
+
+                        <p>+91 7666773084</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Django Contact Form -->
+
+            <form
+                method="POST"
+                action="{% url 'home' %}"
+                class="contact-form"
+            >
+
+                {% csrf_token %}
+
+
+                <!-- Django Messages -->
+
+                {% if messages %}
+
+                    {% for message in messages %}
+
+                        <div class="django-message {{ message.tags }}">
+
+                            {{ message }}
+
+                        </div>
+
+                    {% endfor %}
+
+                {% endif %}
+
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Subject -->
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        name="subject"
+                        class="form-control"
+                        placeholder="Subject"
+                    >
+
+                </div>
+
+
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <textarea
+                        name="message"
+                        class="form-control"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    Send Message
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+
+        <div class="social-links">
+
+
+            <a
+                href="https://www.linkedin.com/in/ashish-lokhande-888497313/"
+                target="_blank"
+                class="social-link"
+            >
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+
+
+            <a
+                href="https://github.com/Ashpatil2003"
+                target="_blank"
+                class="social-link"
+            >
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+
+
+            <a
+                href="https://x.com/AshishLokh14597"
+                target="_blank"
+                class="social-link"
+            >
+
+                <i class="fab fa-twitter"></i>
+
+            </a>
+
+
+
+            <a
+                href="https://www.instagram.com/ashish_82l/"
+                target="_blank"
+                class="social-link"
+            >
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 Ashish Lokhande. All rights reserved.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- Particle JS -->
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+    <!-- Custom JavaScript -->
+
+    <script
+        src="{% static 'portfolio/js/script.js' %}"
+    ></script>
+
+
+</body>
+
+</html>
