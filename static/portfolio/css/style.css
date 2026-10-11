@@ -237,12 +237,12 @@
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-        transform: perspective(1000px) rotateY(-10deg);
+        transform: perspective(1000px) rotateY(0deg);
         transition: transform 0.5s ease;
       }
 
       .about-img:hover {
-        transform: perspective(1000px) rotateY(0deg);
+        transform: perspective(1000px) rotateY(-10deg);
       }
 
       .about-img img {
@@ -257,7 +257,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, var(--primary), var(--secondary));
         opacity: 0.3;
         z-index: 1;
       }
@@ -564,3 +563,185 @@
           grid-template-columns: 1fr;
         }
       }
+
+
+/* =========================================================
+   EDUCATION & CERTIFICATIONS
+   Added section - does not change existing sections
+   ========================================================= */
+
+.education-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.education-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sub-section-title {
+    margin: 0 0 10px 0;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sub-section-title i {
+    font-size: 24px;
+}
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0, 217, 255, 0.6);
+
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.12);
+}
+
+.education-icon {
+    min-width: 55px;
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #00d9ff;
+
+    color: #111;
+
+    font-size: 22px;
+}
+
+.education-info {
+    flex: 1;
+}
+
+.education-info h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+}
+
+.education-institute {
+    margin: 0 0 10px 0;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #00d9ff;
+}
+
+.education-description {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    opacity: 0.8;
+}
+
+.certificate-date {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    background: rgba(0, 217, 255, 0.10);
+
+    color: #00d9ff;
+}
+
+
+/* =========================================================
+   EDUCATION RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .education-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .education-container {
+        width: 92%;
+    }
+
+    .sub-section-title {
+        font-size: 23px;
+    }
+
+    .education-card {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .education-icon {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+
+        font-size: 18px;
+    }
+
+    .education-info h3 {
+        font-size: 17px;
+    }
+
+    .education-institute {
+        font-size: 14px;
+    }
+
+    .education-description {
+        font-size: 13px;
+    }
+
+}
