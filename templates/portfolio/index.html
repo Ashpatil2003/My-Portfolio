@@ -17,10 +17,7 @@
     >
 
     <!-- Custom CSS -->
-    <link
-        rel="stylesheet"
-        href="{% static 'portfolio/css/style.css' %}"
-    >
+   <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}?v=2">
 </head>
 
 <body>
@@ -32,16 +29,21 @@
     <!-- ================= NAVBAR ================= -->
 
     <nav>
+        <a href="{% url 'home' %}" class="logo logo-tech">
+    <span class="logo-bracket">&lt;</span>ASHISH<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span><span class="logo-dot">.</span>
+</a>
 
-        <a href="{% url 'home' %}" class="logo">
-            @SH!SH<span>.</span>
-        </a>
+<!--        <a href="{% url 'home' %}" class="logo">-->
+<!--            @SH!SH<span>.</span>-->
+<!--        </a>-->
 
         <div class="nav-links">
 
             <a href="#about">About</a>
 
             <a href="#education">Education</a>
+
+            <a href="#certifications">Certifications</a>
 
             <a href="#projects">Projects</a>
 
@@ -58,34 +60,78 @@
 
     <!-- ================= HERO SECTION ================= -->
 
+<!--    <section class="hero">-->
+
+<!--        <div class="hero-content">-->
+
+<!--            <h1>Ashish Lokhande</h1>-->
+
+<!--            <h2>Full Stack Python Developer</h2>-->
+
+<!--            <p>-->
+<!--                I build responsive and user-friendly web applications with a focus on clean code, modern technologies, and efficient solutions.-->
+<!--            </p>-->
+
+
+<!--            <div class="cta-buttons">-->
+
+<!--                <a href="#projects" class="btn btn-primary">-->
+<!--                    View My Work-->
+<!--                </a>-->
+
+<!--                <a href="#contact" class="btn btn-secondary">-->
+<!--                    Contact Me-->
+<!--                </a>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </section>-->
+
+
     <section class="hero">
 
-        <div class="hero-content">
-
-            <h1>Ashish Lokhande</h1>
-
-            <h2>Full Stack Python Developer</h2>
-
-            <p>
-                I build responsive and user-friendly web applications with a focus on clean code, modern technologies, and efficient solutions.
-            </p>
+    <div class="hero-content">
 
 
-            <div class="cta-buttons">
+        <h1>Ashish Lokhande</h1>
 
-                <a href="#projects" class="btn btn-primary">
-                    View My Work
-                </a>
+        <h2>Full Stack Python Developer</h2>
 
-                <a href="#contact" class="btn btn-secondary">
-                    Contact Me
-                </a>
+        <p>
+            Specializing in building robust web applications and REST APIs with
+            <strong>Python, Django</strong>, and modern front-ends. Passionate about clean code,
+            relational databases, and integrating AI-driven solutions.
+        </p>
 
-            </div>
-
+        <!-- 2. Action CTAs (Including Resume Download) -->
+        <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">
+                View My Work
+            </a>
+            <a href="{% static 'portfolio/files/Ashish_Lokhande__Resume.pdf' %}" download class="btn btn-secondary">
+                <i class="fas fa-file-download"></i> Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
         </div>
 
-    </section>
+
+        <!-- 4. Quick Tech Chips -->
+        <div class="hero-tech-stack">
+            <span class="tech-chip"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-chip"><i class="fas fa-server"></i> Django</span>
+            <span class="tech-chip"><i class="fas fa-network-wired"></i> REST APIs</span>
+            <span class="tech-chip"><i class="fab fa-react"></i> React</span>
+            <span class="tech-chip"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tech-chip"><i class="fas fa-brain"></i> GenAI / OCI</span>
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- ================= ABOUT SECTION ================= -->
@@ -208,200 +254,152 @@
 
 
 
-        <!-- ================= EDUCATION & CERTIFICATIONS SECTION ================= -->
-
-    <section class="section" id="education">
-
-    ```
-    <h2 class="section-title">
-        Education & Certifications
-    </h2>
-
-    <div class="education-container">
-
-        <!-- Education -->
-
-        <div class="education-column">
-
-            <h3 class="sub-section-title">
-                <i class="fas fa-graduation-cap"></i>
-                Education
-            </h3>
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-university"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>Master of Computer Applications (MCA)</h3>
-
-                    <p class="education-institute">
-                        Currently Pursuing — 1st Year
-                    </p>
-
-                    <p class="education-description">
-                        Currently pursuing MCA with a focus on software
-                        development, programming, databases, and web technologies.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>B.Sc. Computer Science</h3>
-
-                    <p class="education-institute">
-                        Rajkunwar College Waghrul, BAMU University
-                    </p>
-
-                    <p class="education-description">
-                        Completed Bachelor of Science in Computer Science
-                        with a 7.8 CGPA.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-school"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>Higher Secondary Certificate (12th)</h3>
-
-                    <p class="education-institute">
-                        Maharashtra State Board
-                    </p>
-
-                    <p class="education-description">
-                        Completed Higher Secondary Education with 72.67%.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Certifications -->
-
-        <div class="education-column">
-
-            <h3 class="sub-section-title">
-                <i class="fas fa-certificate"></i>
-                Certifications
-            </h3>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>Oracle Cloud Infrastructure 2025</h3>
-
-                    <p class="education-institute">
-                        Generative AI Professional
-                    </p>
-
-                    <p class="education-description">
-                        Oracle certification in Generative AI and
-                        Oracle Cloud Infrastructure.
-                    </p>
-
-                    <span class="certificate-date">
-                        September 2025
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>Oracle Cloud Infrastructure 2025</h3>
-
-                    <p class="education-institute">
-                        AI Foundations Associate
-                    </p>
-
-                    <p class="education-description">
-                        Oracle certification covering foundational
-                        concepts of Artificial Intelligence and Cloud.
-                    </p>
-
-                    <span class="certificate-date">
-                        September 2025
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fab fa-python"></i>
-                </div>
-
-                <div class="education-info">
-
-                    <h3>Full Stack Python Development</h3>
-
-                    <p class="education-institute">
-                        Naresh i Technologies
-                    </p>
-
-                    <p class="education-description">
-                        Training in Python, Django, databases,
-                        web development, REST APIs, HTML, CSS,
-                        JavaScript and full-stack development.
-                    </p>
-
-                    <span class="certificate-date">
-                        February 2026
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
+ <!-- ================= EDUCATION SECTION ================= -->
+<section class="section section-education" id="education">
+    <div class="section-header">
+        <h2 class="section-title">Education</h2>
     </div>
-    ```
 
-    </section>
+    <div class="cards-grid">
+        <!-- Education Card 1 -->
+        <div class="timeline-card edu-card">
+            <div class="card-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">Master of Computer Applications (MCA)</h3>
+                    <span class="status-badge pursuing">1st Year • Pursuing</span>
+                </div>
+                <p class="institute-name">Currently Pursuing</p>
+                <p class="card-description">
+                    Focusing on advanced software engineering, core data structures, databases, and full-stack web architectures.
+                </p>
+            </div>
+        </div>
 
+        <!-- Education Card 2 -->
+        <div class="timeline-card edu-card">
+            <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">B.Sc. Computer Science</h3>
+                    <span class="status-badge score">7.8 CGPA</span>
+                </div>
+                <p class="institute-name">Rajkunwar College Waghrul, BAMU University</p>
+                <p class="card-description">
+                    Graduated with a solid foundation in computer science principles, database management, and programming methodologies.
+                </p>
+            </div>
+        </div>
+
+        <!-- Education Card 3 -->
+        <div class="timeline-card edu-card">
+            <div class="card-icon">
+                <i class="fas fa-school"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">Higher Secondary Certificate (12th)</h3>
+                    <span class="status-badge score">72.67%</span>
+                </div>
+                <p class="institute-name">Maharashtra State Board</p>
+                <p class="card-description">
+                    Completed higher secondary education under Maharashtra State Board with primary concentration on physics, chemistry, and advanced mathematics.
+                </p>
+            </div>
+        </div>
+
+        <!-- Education Card 3 -->
+        <div class="timeline-card edu-card">
+            <div class="card-icon">
+                <i class="fas fa-school"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">Secondary School Certificate (10th)</h3>
+                    <span class="status-badge score">87.60%</span>
+                </div>
+                <p class="institute-name">Maharashtra State Board</p>
+                <p class="card-description">
+                    Completed Secondary School Certificate (SSC) with a strong academic foundation across general sciences, mathematics, and languages.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CERTIFICATIONS SECTION ================= -->
+<section class="section section-certifications" id="certifications">
+    <div class="section-header">
+        <h2 class="section-title">Certifications</h2>
+    </div>
+
+    <div class="cards-grid">
+
+        <!-- Certification Card 1 -->
+        <div class="timeline-card cert-card">
+            <div class="card-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">Full Stack Python Development</h3>
+                    <span class="date-badge">July 2026</span>
+                </div>
+                <p class="institute-name">Naresh i Technologies</p>
+                <p class="card-description">
+                    Gained practical knowledge of Python, Django, REST APIs, MySQL, HTML, CSS, and JavaScript for full-stack web application development.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Certification Card 2 -->
+        <div class="timeline-card cert-card">
+            <div class="card-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">Generative AI Professional</h3>
+                    <span class="date-badge">Sept 2025</span>
+                </div>
+                <p class="institute-name"><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=D77999F31231D81EF8BD95AF7DE335807A5C6457921DC867EB607622FF42A40F" target="_blank" rel="noopener noreferrer" class="cert-title-link">
+                Oracle Cloud Infrastructure 2025
+                <i class="fas fa-external-link-alt link-mini-icon"></i>
+            </a></p>
+                <p class="card-description">
+                   Demonstrated knowledge of LLMs, OCI Generative AI, RAG, semantic search, vector databases, and LangChain for building and deploying AI applications.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Certification Card 3 -->
+        <div class="timeline-card cert-card">
+            <div class="card-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="card-content">
+                <div class="card-top">
+                    <h3 class="card-title">AI Foundations Associate</h3>
+                    <span class="date-badge">Sept 2025</span>
+                </div>
+                <p class="institute-name"><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6F4C1EE141D3E55EF2CB21D030431945936B67A66E89915CC52A8B445A322189" target="_blank" rel="noopener noreferrer" class="cert-title-link">
+                Oracle Cloud Infrastructure 2025
+                <i class="fas fa-external-link-alt link-mini-icon"></i>
+            </a></p>
+                <p class="card-description">
+                    Gained foundational knowledge of AI, machine learning, deep learning, supervised and unsupervised learning, LLMs, and related OCI AI services.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <!-- ================= PROJECT SECTION ================= -->
@@ -444,7 +442,7 @@
             <!-- PROJECT 2 -->
             <div class="project-card">
                 <div class="project-img">
-                    <img  src="{% static 'portfolio/images/radio.jpg' %}"  alt="Music player">
+                    <img  src="{% static 'portfolio/images/music1.jpg' %}"  alt="Music player">
                 </div>
 
                 <div class="project-info">
@@ -542,6 +540,43 @@
 
 
                         <a href="https://github.com/Ashpatil2003/Weather_App" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- PROJECT 5 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img  src="{% static 'portfolio/images/blog.jpg' %}"  alt="Grid Puzzle Game">
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">Blogs App</h3>
+
+                    <p class="project-description">
+                        Built a multi-user blogging platform allowing members to register accounts, publish original posts, and browse articles written by other creators.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML </span>
+                        <span class="tech-tag">CSS </span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://blog-app-o7mn.onrender.com/" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+
+
+                        <a href="https://github.com/Ashpatil2003/Blog_App" target="_blank" class="project-link">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -807,7 +842,7 @@
 
         <p class="copyright">
 
-            © 2026 Ashish Lokhande. All rights reserved.
+            © 2026 Ashish Lokhande | Built with passion & Python.
 
         </p>
 
