@@ -1,45 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Space+Grotesk:wght@700&display=swap');
 
-
-
-
-
-.logo-glow {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-decoration: none;
+.logo-sleek {
     display: inline-flex;
     align-items: baseline;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 0;
+    transition: opacity 0.25s ease;
 }
 
-.logo-glow .logo-text {
-    background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 80%, #ff7e5f 100%);
+/* Subtle, soft matte white '@' (slightly larger, but grounded without harsh glare) */
+.logo-sleek .symbol-at {
+    font-size: 1.9rem;
+    font-weight: 1000;
+    color: #e2e8f0; /* Soft off-white to avoid eye fatigue */
+    margin-right: 1px;
+    transform: translateY(1.5px);
+    display: inline-block;
+    transition: color 0.55s ease;
+}
+
+/* Elegant deep satin-gold for 'SH!SH' (subtle, rich, non-distracting) */
+.logo-sleek .logo-body {
+    font-size: 1.35rem;
+    font-weight: 1000;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #e6b800 0%, #d48b17 50%, #b86214 100%);
     -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: all 0.3s ease;
+    -webkit-text-fill-color: transparent;
 }
 
-.logo-glow .logo-dot {
-    color: var(--accent); /* #ff7e5f */
-    font-size: 2.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+/* Clean, balanced exclamation mark */
+.logo-sleek .symbol-exclamation {
+    color: #d48b17;
+    -webkit-text-fill-color: #d48b17;
+    display: inline-block;
+    padding: 0 1px;
+    font-weight: 1000;
 }
 
-.logo-glow:hover {
-    transform: scale(1.04);
+/* Refined accent dot with no harsh radial neon */
+.logo-sleek .logo-dot {
+    font-size: 1.4rem;
+    line-height: 0;
+    color: #d48b17;
+    font-weight: 1000;
+    margin-left: 1px;
 }
 
-.logo-glow:hover .logo-text {
-    background: linear-gradient(135deg, #ffffff 20%, #7f5af0 60%, #34d399 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
+/* Subtle hover interaction without harsh flashing */
+.logo-sleek:hover {
+    opacity: 0.58;
 }
 
-.logo-glow:hover .logo-dot {
-    color: #34d399;
-    transform: scale(1.2);
+.logo-sleek:hover .symbol-at {
+    color: #ffffff;
 }
 /* =========================================================
    NEW HERO ADDITIONS (STATUS PILL, BUTTON & TECH CHIPS)
